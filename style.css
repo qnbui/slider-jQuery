@@ -1,53 +1,29 @@
-* {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;margin:0}
-.contenu {display:none;
-
-}
-
-
 .slider {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+  max-width: 400px;
+  background-color: black;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
 }
-
-
-
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+.slider div {
+  background-color: white;
+  width: 100%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  display: none;
+}
+.slider img {
+  width: 100%;
+  height: auto;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+button {
+  position: absolute;
 }
 
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.next {
+  right: 5px;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+.prev {
+  left: 5px;
 }
