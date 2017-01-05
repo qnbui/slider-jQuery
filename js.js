@@ -1,4 +1,4 @@
-<script src="jquery-3.1.1.js"></script>
+
 var currentIndex = 0,
   items = $('.slider div'),
   itemAmt = items.length;
