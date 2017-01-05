@@ -1,7 +1,7 @@
 
 var currentIndex = 0,
   items = $('.slider div'),
-  itemAmt = items.length;
+  itemLen = items.length;
 
 function carousel() {
   var item = $('.slider div').eq(currentIndex);
@@ -11,7 +11,7 @@ function carousel() {
 
 var automatic = setInterval(function() {
   currentIndex += 1;
-  if (currentIndex > itemAmt - 1) {
+  if (currentIndex > itemLen - 1) {
     currentIndex = 0;
   }
   carousel();
@@ -20,7 +20,7 @@ var automatic = setInterval(function() {
 $('.next').click(function() {
   clearInterval(automatic);
   currentIndex += 1;
-  if (currentIndex > itemAmt - 1) {
+  if (currentIndex > itemLen - 1) {
     currentIndex = 0;
   }
   carousel();
@@ -30,7 +30,7 @@ $('.prev').click(function() {
   clearInterval(automatic);
   currentIndex -= 1;
   if (currentIndex < 0) {
-    currentIndex = itemAmt - 1;
+    currentIndex = itemLen - 1;
   }
   carousel();
 });
